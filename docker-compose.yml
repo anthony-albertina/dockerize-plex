@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  plex:
+    container_name: plex
+    image: plex:${PLEX_IMAGE_TAG}
+    ports:
+      - "${PLEX_PORT_EXTERNAL}:${PLEX_PORT_INTERNAL}"
+    networks:
+      - vlan
+    volumes:
+      - /etc/fstab:/etc/fstab
+      other
