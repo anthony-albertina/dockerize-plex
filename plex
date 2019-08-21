@@ -4,7 +4,7 @@
 # chkconfig: 345 20 80
 # description: Plex Media Server service script
 
-# Source function library (path for AWS Linux's etc functions).
+# Source function library
 . /etc/rc.d/init.d/functions
 
 # Variables
@@ -29,7 +29,7 @@ stop() {
 status() {
   service_status=$(docker ps -a | grep plex | head -n 1 | grep Up)
   if [ -z $service_status ]; then
-    echo "Plex is down. We recommend restarting plex."
+    echo "Plex is down. We recommend restarting Plex."
     Usage
   fi
 }
