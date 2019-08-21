@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Plex
+# chkconfig: 345 20 80
+# description: Plex Media Server service script
+
+# Source function library (path for AWS Linux's etc functions).
+. /etc/rc.d/init.d/functions
+
+# Variables
+docker_compose_dir=$(SED_ME) # Location of docker-compose.yml
+
+usage() {
+  echo "Usage: service sonarqube {start|stop|status|restart}"
+}
+
+start() {
+  echo "Starting Plex"
+  cd $docker_compose_dir
+  docker-compose up -d
+}
+
+stop() {
+  echo "Stopping Plex"
+  cd $docker_compose_dir
+  docker-compose stop
+}
+
+status() {
+  service_status=$(docker ps -a | grep plex | head -n 1 | grep Up)
+  if [ -z $service_status ]; then
+    echo "Plex is down. We recommend restarting plex."
+    Usage
+  fi
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  status)
+    status
+    ;;
+  restart)
+    stop
+    start
+    ;;
+  *)
+    usage
+    exit 1
+    ;;
+esac

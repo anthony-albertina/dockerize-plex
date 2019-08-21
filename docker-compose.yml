@@ -3,11 +3,8 @@ version: "3.5"
 services:
   plex:
     container_name: plex
-    image: plex:${PLEX_IMAGE_TAG}
+    image: plexinc/pms-docker:latest
     ports:
-      - "${PLEX_PORT_EXTERNAL}:${PLEX_PORT_INTERNAL}"
-    networks:
-      - vlan
+      - "32400:32400"
     volumes:
-      - /etc/fstab:/etc/fstab
-      other
+      - /media/USB_Storage:/media/USB_Storage
