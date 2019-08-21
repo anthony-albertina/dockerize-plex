@@ -1,5 +1,9 @@
 # Docker implementation of Plex Media Server
 
+<p align="right">
+        <img src="/plex-logo.PNG">
+</p>
+
 This repo has the scripts to easily start your own Plex Media Server. 
 It mounts a network drive with the media and pops open the webpage. 
 Furthermore, it is set to start at boot and persist your configs.

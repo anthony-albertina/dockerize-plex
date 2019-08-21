@@ -11,7 +11,7 @@
 docker_compose_dir=$(SED_ME) # Location of docker-compose.yml
 
 usage() {
-  echo "Usage: service sonarqube {start|stop|status|restart}"
+  echo "Usage: service plex {start|stop|status|restart}"
 }
 
 start() {
