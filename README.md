@@ -5,8 +5,8 @@
 </p>
 
 This repo has the scripts to easily start your own Plex Media Server. 
-It mounts a network drive with the media and pops open the webpage. 
-Furthermore, it is set to start at boot and persist your configs.
+It installs docker and other dependencies, mounts a network drive with the media,
+and pops open the webpage. Furthermore, it is set to start at boot and persist your configs.
 
 To start run:
 ```bash
