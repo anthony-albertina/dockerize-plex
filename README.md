@@ -1,7 +1,7 @@
 # Docker implementation of Plex Media Server
 
 <p align="center">
-        <img src="/plex-logo.PNG" width="400">
+        <img src="/plex-logo.PNG" width="420">
 </p>
 
 This repo has the scripts to easily start your own Plex Media Server. 
