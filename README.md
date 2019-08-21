@@ -1,7 +1,7 @@
 # Docker implementation of Plex Media Server
 
 <p align="center">
-        <img src="/plex-logo.PNG" width="650">
+        <img src="/plex-logo.PNG" width="450">
 </p>
 
 This repo has the scripts to easily start your own Plex Media Server. 
@@ -27,6 +27,7 @@ To stop and start later on run:
  sudo service plex stop
 ```
 
+Enjoy your Plex!
 <p align="center">
-	<img src="/plex-server.PNG" width="650">
+	<img src="/plex-server.PNG" width="750">
 </p>
