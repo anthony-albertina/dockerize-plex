@@ -23,8 +23,8 @@ This will start the server. Log in and configure your media. If you wish to pers
 
 To stop and start later on run:
 ```bash
- sudo service plex start
  sudo service plex stop
+ sudo service plex start
 ```
 
 Enjoy your Plex!
