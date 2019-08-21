@@ -5,7 +5,7 @@ if [ -d config ]; then rm -rf config; fi
 docker cp $(docker ps -a | grep plex | awk -F ' ' '{print $1}'):/config ./config
 
 # Mount config files in docker-compose
-if [ -z $(cat docker-compose.yml | tail -n 1) ]; then
+if [ -z $(cat docker-compose.yml | grep config) ]; then
   echo "      - /config:/config" >> docker-compose.yml
 fi
 
