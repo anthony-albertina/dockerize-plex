@@ -6,7 +6,7 @@ if [ ! -d config ]; then
 fi
 
 # Mount config files in docker-compose
-if [ -z $(cat docker-compose.yml | tail -n 1) ]; then
+if [ -z $(cat docker-compose.yml | grep config) ]; then
   echo "      - /config:/config" >> docker-compose.yml
 fi
 
