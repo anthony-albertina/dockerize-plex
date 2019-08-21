@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # Copy config files from container to host
-if [ ! -d config ]; then
-  docker cp $(docker ps -a | grep plex | awk -F ' ' '{print $1}'):/config ./config
-fi
+if [ -d config ]; then rm -rf config; fi
+docker cp $(docker ps -a | grep plex | awk -F ' ' '{print $1}'):/config ./config
 
 # Mount config files in docker-compose
 if [ -z $(cat docker-compose.yml | tail -n 1) ]; then
