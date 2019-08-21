@@ -1,6 +1,6 @@
 # Docker implementation of Plex Media Server
 
-<p align="right">
+<p align="center" width="650">
         <img src="/plex-logo.PNG">
 </p>
 
